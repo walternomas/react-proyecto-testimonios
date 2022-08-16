@@ -8,7 +8,8 @@ function App() {
       <div className="contenedor-principal">
         <h1>Esto es lo que dicen nuestros alumnos sobre freeCodeCamp:</h1>
         {data.testimonios.map((testimonio) => (
-          <Testimonio
+          <Testimonio 
+            key={testimonio.id}
             imagen={testimonio.imagen}
             nombre={testimonio.nombre}
             pais={testimonio.pais}

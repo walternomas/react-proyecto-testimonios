@@ -1,4 +1,5 @@
 import '../hojas-de-estilo/Testimonio.css';
+import parse from "html-react-parser";
 
 function Testimonio({imagen,nombre,pais,cargo,empresa,testimonio}) {
   return (
@@ -11,7 +12,7 @@ function Testimonio({imagen,nombre,pais,cargo,empresa,testimonio}) {
       <div className='contenedor-texto-testimonio'>
         <p className='nombre-testimonio'><strong>{nombre}</strong> en {pais}</p>
         <p className='cargo-testimonio'>{cargo} en <strong>{empresa}</strong></p>
-        <p className='texto-testimonio'>"{testimonio}"</p>
+        <p className='texto-testimonio'>{parse(testimonio)}</p>
       </div>
     </div>
   );
